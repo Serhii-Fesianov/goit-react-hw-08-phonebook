@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export const HomePage = () => {
   return (
@@ -9,6 +10,7 @@ export const HomePage = () => {
           💁‍♀️
         </span>
       </h1>
+      <Link to="/contacts">Get Started!&#128509;</Link>
     </div>
   );
 };

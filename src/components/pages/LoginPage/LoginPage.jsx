@@ -1,6 +1,16 @@
+import { loginThunk } from 'components/redux/operations';
 import React from 'react';
+import { useForm } from 'react-hook-form';
+import { useDispatch } from 'react-redux';
 
 export const LoginPage = () => {
+  const { register, reset, handleSubmit } = useForm();
+  const dispatch = useDispatch();
+  const submit = data => {
+    console.log(data);
+    dispatch(loginThunk(data));
+    reset();
+  };
   return (
     <div className="">
       <div className="">
@@ -14,18 +24,25 @@ export const LoginPage = () => {
           </p>
         </div>
         <div className="">
-          <form className="">
+          <form className="" onSubmit={handleSubmit(submit)}>
             <div className="">
               <label className="">
                 <span className="">Email</span>
               </label>
-              <input type="email" placeholder="email" className="" required />
+              <input
+                {...register('email')}
+                type="email"
+                placeholder="email"
+                className=""
+                required
+              />
             </div>
             <div className="">
               <label className="">
                 <span className="">Password</span>
               </label>
               <input
+                {...register('password')}
                 type="password"
                 placeholder="password"
                 className=""
