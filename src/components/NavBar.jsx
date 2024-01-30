@@ -11,14 +11,16 @@ export const NavBar = () => {
   return (
     <div className={s.NavBarWrapper}>
       <div className="">
-        <Link to="/" className="">
+        <Link to="/" className={s.styleLink}>
           HOME | AUTH LESSON
         </Link>
       </div>
       <div className="">
         <ul className="">
           <li>
-            <NavLink to="/contacts">Contacts</NavLink>
+            <NavLink to="/contacts" className={s.styleLink}>
+              Contacts
+            </NavLink>
           </li>
           <li>{isLoggedIn ? <ProfileDetails /> : <AuthDetails />}</li>
         </ul>

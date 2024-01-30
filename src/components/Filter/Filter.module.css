@@ -1,10 +1,20 @@
 .styleInputFilter {
-  width: 250px;
-  height: 35px;
-  border: 2px solid rgb(132, 132, 243);
-  border-radius: 10px;
-  box-shadow: 1px 2px 2px 1px;
   margin: 10px auto 0 auto;
+  width: 300px;
+  height: 40px;
+  margin-top: 5px;
+  border: 3px solid rgb(80, 114, 251);
+  border-radius: 7px;
+  box-shadow: 1px 2px 2px 1px;
+  &:hover {
+    border: 3px solid rgb(27, 153, 27);
+  }
+  &:focus {
+    border: 3px solid rgb(27, 153, 27);
+  }
+  &:active {
+    border: 3px solid rgb(27, 153, 27);
+  }
 }
 
 .styleFindNameText {

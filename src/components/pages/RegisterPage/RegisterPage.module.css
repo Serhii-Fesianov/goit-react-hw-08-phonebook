@@ -1,19 +1,30 @@
-.styleForm {
+.wrapperRegister {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
 }
 
-.styleName {
-  text-align: center;
-  font-style: italic;
-  font-weight: 400;
-  font-size: 40px;
-  margin: 0;
+.wrapperInputRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 320px;
+  flex-direction: column;
+  padding: 10px 0;
 }
 
-.styleInput {
-  margin: 10px auto 0 auto;
+.formStyle {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 320px;
+}
+
+.inputStyle {
   width: 300px;
   height: 40px;
   margin-top: 5px;
@@ -31,18 +42,24 @@
   }
 }
 
-.styleNumber {
-  text-align: center;
-  font-style: italic;
-  font-weight: 400;
-  font-size: 40px;
-  margin: 0;
+.titleStyle {
+  color: rgb(80, 114, 251);
+  font-weight: 600;
+  box-shadow: 1px 2px 2px 1px;
+  border-radius: 6px;
+  background-color: whitesmoke;
 }
 
-.styleButton {
+.titleStyleSpan {
+  color: rgb(80, 114, 251);
+  font-weight: 800;
+  box-shadow: 1px 2px 2px 1px;
+  border-radius: 6px;
+  background-color: whitesmoke;
+}
+
+.buttonStyle {
   font-size: 20px;
-  margin: 0 auto;
-  margin-top: 10px;
   color: rgb(80, 114, 251);
   border: 3px solid rgb(80, 114, 251);
   border-radius: 8px;

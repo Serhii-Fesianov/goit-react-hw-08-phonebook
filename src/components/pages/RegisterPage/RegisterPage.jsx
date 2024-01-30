@@ -2,6 +2,7 @@ import { registerThunk } from 'components/redux/operations';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
+import s from './RegisterPage.module.css';
 
 export const RegisterPage = () => {
   const { register, reset, handleSubmit } = useForm();
@@ -12,59 +13,51 @@ export const RegisterPage = () => {
     reset();
   };
   return (
-    <div className="">
-      <div className="">
-        <div className="">
-          <h1 className="">Register now!</h1>
-          <p className="">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Dignissimos ad laudantium ex. Nam molestiae et velit assumenda,
-            consectetur sint vel qui ullam ducimus dolor commodi cupiditate
-            laboriosam voluptates temporibus eius.
-          </p>
+    <div className={s.wrapperRegister}>
+      <div className={s.wrapperRegister}>
+        <div className={s.wrapperRegister}>
+          <h1 className={s.titleStyle}>Register now!</h1>
         </div>
-        <div className="">
-          <form className="" onSubmit={handleSubmit(submit)}>
-            <div className="">Try again... Something went wrong!</div>
-
-            <div className="">
+        <div className={s.wrapperRegister}>
+          <form className={s.formStyle} onSubmit={handleSubmit(submit)}>
+            <div className={s.wrapperInputRow}>
               <label className="">
-                <span className="">Name</span>
+                <span className={s.titleStyleSpan}>Name</span>
               </label>
               <input
                 {...register('name')}
                 type="text"
                 placeholder="Enter your name"
-                className="input input-bordered"
+                className={s.inputStyle}
                 required
               />
             </div>
-            <div className="">
+            <div className={s.wrapperInputRow}>
               <label className="">
-                <span className="">Email</span>
+                <span className={s.titleStyleSpan}>Email</span>
               </label>
               <input
                 {...register('email')}
                 type="email"
                 placeholder="email"
-                className="input input-bordered"
+                className={s.inputStyle}
                 required
               />
             </div>
-            <div className="">
+            <div className={s.wrapperInputRow}>
               <label className="">
-                <span className="">Password</span>
+                <span className={s.titleStyleSpan}>Password</span>
               </label>
               <input
                 {...register('password')}
                 type="password"
                 placeholder="password"
-                className=""
+                className={s.inputStyle}
                 required
               />
             </div>
             <div className="">
-              <button className="">Register</button>
+              <button className={s.buttonStyle}>Register</button>
             </div>
           </form>
         </div>

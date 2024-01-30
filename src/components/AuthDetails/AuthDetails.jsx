@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import s from './AuthDetails.module.css';
 
 export const AuthDetails = () => {
   return (
@@ -7,10 +8,14 @@ export const AuthDetails = () => {
       <summary>Auth</summary>
       <ul className="">
         <li>
-          <Link to="/login">Login</Link>
+          <Link to="/login" className={s.styleLink}>
+            Login
+          </Link>
         </li>
         <li>
-          <Link to="/register">Register</Link>
+          <Link to="/register" className={s.styleLink}>
+            Register
+          </Link>
         </li>
       </ul>
     </details>

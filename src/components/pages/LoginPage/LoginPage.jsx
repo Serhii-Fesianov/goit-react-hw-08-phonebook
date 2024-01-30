@@ -2,6 +2,7 @@ import { loginThunk } from 'components/redux/operations';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
+import s from './LoginPage.module.css';
 
 export const LoginPage = () => {
   const { register, reset, handleSubmit } = useForm();
@@ -12,45 +13,39 @@ export const LoginPage = () => {
     reset();
   };
   return (
-    <div className="">
-      <div className="">
+    <div className={s.wrapperLogin}>
+      <div className={s.wrapperLogin}>
         <div className="">
-          <h1 className="">Login now!</h1>
-          <p className="">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat
-            libero, quisquam aut sapiente deserunt saepe non ex minus iusto
-            facere modi expedita repudiandae quia pariatur. Obcaecati non
-            quisquam quod debitis!
-          </p>
+          <h1 className={s.titleStyle}>Login now!😉</h1>
         </div>
         <div className="">
-          <form className="" onSubmit={handleSubmit(submit)}>
-            <div className="">
+          <form className={s.formStyle} onSubmit={handleSubmit(submit)}>
+            <div className={s.wrapperInputRow}>
               <label className="">
-                <span className="">Email</span>
+                <span className={s.titleStyleSpan}>Email</span>
               </label>
               <input
                 {...register('email')}
                 type="email"
                 placeholder="email"
-                className=""
+                className={s.inputStyle}
                 required
               />
             </div>
-            <div className="">
+            <div className={s.wrapperInputRow}>
               <label className="">
-                <span className="">Password</span>
+                <span className={s.titleStyleSpan}>Password</span>
               </label>
               <input
                 {...register('password')}
                 type="password"
                 placeholder="password"
-                className=""
+                className={s.inputStyle}
                 required
               />
             </div>
             <div className="">
-              <button className="">Login</button>
+              <button className={s.buttonStyle}>Login</button>
             </div>
           </form>
         </div>
