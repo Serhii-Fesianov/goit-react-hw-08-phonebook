@@ -17,11 +17,13 @@ export const NavBar = () => {
       </div>
       <div className="">
         <ul className={s.styleList}>
-          <li>
-            <NavLink to="/contacts" className={s.styleLink}>
-              Contacts
-            </NavLink>
-          </li>
+          {isLoggedIn && (
+            <li>
+              <NavLink to="/contacts" className={s.styleLink}>
+                Contacts
+              </NavLink>
+            </li>
+          )}
           <li>{isLoggedIn ? <ProfileDetails /> : <AuthDetails />}</li>
         </ul>
       </div>

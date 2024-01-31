@@ -7,7 +7,7 @@ export const PublickRoutes = ({ children }) => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
   const location = useLocation();
   if (isLoggedIn) {
-    return <Navigate to={location.state?.from || '/'} />;
+    return <Navigate to={location.state?.from || '/contacts'} />;
   }
   return children;
 };
