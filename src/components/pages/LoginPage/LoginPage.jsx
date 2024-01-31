@@ -8,7 +8,6 @@ export const LoginPage = () => {
   const { register, reset, handleSubmit } = useForm();
   const dispatch = useDispatch();
   const submit = data => {
-    console.log(data);
     dispatch(loginThunk(data));
     reset();
   };

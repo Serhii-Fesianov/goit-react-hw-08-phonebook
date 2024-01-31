@@ -5,6 +5,8 @@ import { HomePage } from './pages/HomePage/HomePage';
 import { ContactsPage } from './pages/ContactsPage/ContactsPage';
 import { LoginPage } from './pages/LoginPage/LoginPage';
 import { RegisterPage } from './pages/RegisterPage/RegisterPage';
+import { PublickRoutes } from 'Routes/PublickRoutes';
+import { PrivateRoutes } from 'Routes/PrivateRoutes';
 
 export const App = () => {
   return (
@@ -12,9 +14,30 @@ export const App = () => {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
-          <Route path="contacts" element={<ContactsPage />} />
-          <Route path="login" element={<LoginPage />} />
-          <Route path="register" element={<RegisterPage />} />
+          <Route
+            path="contacts"
+            element={
+              <PrivateRoutes>
+                <ContactsPage />
+              </PrivateRoutes>
+            }
+          />
+          <Route
+            path="login"
+            element={
+              <PublickRoutes>
+                <LoginPage />
+              </PublickRoutes>
+            }
+          />
+          <Route
+            path="register"
+            element={
+              <PublickRoutes>
+                <RegisterPage />
+              </PublickRoutes>
+            }
+          />
         </Route>
       </Routes>
     </>
