@@ -7,15 +7,22 @@ import { LoginPage } from './pages/LoginPage/LoginPage';
 import { RegisterPage } from './pages/RegisterPage/RegisterPage';
 import { PublickRoutes } from 'Routes/PublickRoutes';
 import { PrivateRoutes } from 'Routes/PrivateRoutes';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { refreshThunk } from './redux/operations';
+import { selectIsRefresh } from './redux/auth/slice';
+import { Loader } from './Loader/Loader';
 
 export const App = () => {
   const dispatch = useDispatch();
+  const refresh = useSelector(selectIsRefresh);
   useEffect(() => {
     dispatch(refreshThunk());
   }, [dispatch]);
-  return (
+  return refresh ? (
+    <div className="">
+      <Loader />
+    </div>
+  ) : (
     <>
       <Routes>
         <Route path="/" element={<Layout />}>
