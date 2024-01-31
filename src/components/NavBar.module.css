@@ -1,6 +1,10 @@
 .NavBarWrapper {
   background-color: lightpink;
   border: 4px solid papayawhip;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 120px;
 }
 
 .styleLink {
@@ -21,4 +25,14 @@
     color: green;
     background-color: beige;
   }
+}
+
+.styleList {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+  margin-right: 30px;
 }

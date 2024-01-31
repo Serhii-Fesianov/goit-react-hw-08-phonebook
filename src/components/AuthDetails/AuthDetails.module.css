@@ -17,3 +17,33 @@
     background-color: beige;
   }
 }
+
+.styleListLink {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.styleSummary {
+  height: 25px;
+  margin: 10px 5px;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: green;
+  box-shadow: 1px 2px 2px 1px;
+  border: 1px solid navy;
+  border-radius: 5px;
+  background-color: whitesmoke;
+  &:hover {
+    color: green;
+    background-color: beige;
+  }
+  &:active {
+    color: green;
+    background-color: beige;
+  }
+}

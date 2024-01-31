@@ -10,13 +10,13 @@ export const NavBar = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
   return (
     <div className={s.NavBarWrapper}>
-      <div className="">
+      <div>
         <Link to="/" className={s.styleLink}>
           HOME | AUTH LESSON
         </Link>
       </div>
       <div className="">
-        <ul className="">
+        <ul className={s.styleList}>
           <li>
             <NavLink to="/contacts" className={s.styleLink}>
               Contacts

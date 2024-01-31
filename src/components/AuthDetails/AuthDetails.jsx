@@ -5,8 +5,8 @@ import s from './AuthDetails.module.css';
 export const AuthDetails = () => {
   return (
     <details>
-      <summary>Auth</summary>
-      <ul className="">
+      <summary className={s.styleSummary}>Auth 🔐</summary>
+      <ul className={s.styleListLink}>
         <li>
           <Link to="/login" className={s.styleLink}>
             Login

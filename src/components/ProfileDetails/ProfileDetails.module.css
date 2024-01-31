@@ -1,0 +1,65 @@
+.styleSummary {
+  height: 25px;
+  margin: 10px 5px;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: green;
+  box-shadow: 1px 2px 2px 1px;
+  border: 1px solid navy;
+  border-radius: 5px;
+  background-color: whitesmoke;
+  &:hover {
+    color: green;
+    background-color: beige;
+  }
+  &:active {
+    color: green;
+    background-color: beige;
+  }
+}
+
+.styleList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.styleEmail {
+  color: rgb(27, 153, 27);
+  font-weight: 600;
+  box-shadow: 1px 2px 2px 1px;
+  border-radius: 6px;
+  background-color: whitesmoke;
+}
+
+.styleButton {
+  font-size: 10px;
+  margin: 0 auto;
+  color: rgb(27, 153, 27);
+  border: 3px solid rgb(27, 153, 27);
+  border-radius: 8px;
+  box-shadow: 1px 2px 2px 1px;
+  cursor: pointer;
+  width: 75px;
+  height: 30px;
+  background-color: whitesmoke;
+  &:hover {
+    border: 3px solid darkgreen;
+    background-color: rgb(241, 208, 163);
+    color: rgb(27, 153, 27);
+  }
+  &:focus {
+    border: 3px solid darkgreen;
+    background-color: rgb(241, 208, 163);
+    color: rgb(27, 153, 27);
+  }
+  &:active {
+    border: 3px solid darkgreen;
+    background-color: rgb(241, 208, 163);
+    color: rgb(27, 153, 27);
+  }
+}
